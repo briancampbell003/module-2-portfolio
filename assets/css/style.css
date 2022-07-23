@@ -1,4 +1,57 @@
 * {
-    background-color: black;
-    color: antiquewhite;
+
+}
+
+h1, h2 {
+    color: chartreuse;
+}
+header {
+  height: 100px;
+}
+#logo {
+  width: 250px;
+  height: 400px;
+  background-color: black;
+}
+
+nav {
+  display:flex;
+  flex-direction: row;
+  width: calc(100% - 250px);
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+nav a {
+    padding: 0 0;
+    opacity: .35;
+}
+
+#about:hover {
+  opacity: 1;
+}
+#work:hover {
+  opacity: 1;
+}
+#contact:hover {
+  opacity: 1;
+}
+
+#aboutsection {
+  margin: 20% 0 0 0;
+  width: 250px;
+  color: azure;
+  background-color: black;
 }
