@@ -4,54 +4,112 @@
 
 h1, h2 {
     color: chartreuse;
-}
-header {
-  height: 100px;
-}
-#logo {
-  width: 250px;
-  height: 400px;
-  background-color: black;
+    font-family: "Olde English", 'Times New Roman', Times, serif;
+    font-size: 30px;
+    padding-left: 15px;
 }
 
-nav {
-  display:flex;
-  flex-direction: row;
-  width: calc(100% - 250px);
-  height: 100px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  background-color: white;
-  align-items: center;
-  justify-content: center;
+/* TOP-LEFT LOGO, TOP NAV BAR, AND LEFT ABOUT BAR */
 
-}
+    #logo {
+      width: 300px;
+      height: 300px;
+      background-color: black;
+    }
 
-nav ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      width: calc(100% - 300px);
+      height: 100px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background-color: white;
+      align-items: center;
 
-nav a {
-    padding: 0 0;
-    opacity: .35;
-}
+    }
 
-#about:hover {
-  opacity: 1;
-}
-#work:hover {
-  opacity: 1;
-}
-#contact:hover {
-  opacity: 1;
-}
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
 
-#aboutsection {
-  margin: 20% 0 0 0;
-  width: 250px;
-  color: azure;
-  background-color: black;
-}
+    nav a {
+        padding: 0 2vw;
+        opacity: .35;
+    }
+
+    #decorativebar {
+      height: 100px;
+      width: 100%;
+      position: absolute;
+      top: 100px;
+      left: 300px;
+      background-image: url("../images/static.png");
+    }
+    #about:hover {
+      opacity: 1;
+    }
+    #work:hover {
+      opacity: 1;
+    }
+    #contact:hover {
+      opacity: 1;
+    }
+
+    #aboutsection {
+      /* margin: 300px 0 0 0; */
+      width: 300px;
+      height: 100%;
+      color: azure;
+      background-color: black;
+    }
+
+/* WORK (MAIN) SECTION */
+    main {
+      position:absolute;
+      top:100px;
+      left:300px;
+      width: calc(100% - 300px);
+      padding: 10px;
+    }
+
+    .worksection {
+      display:flex;
+      flex-direction: row;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+
+    .bigcard {
+
+    }
+
+    .card {
+
+    }
+
+  /* CONTACT (FOOTER) SECTION */
+    footer {
+      position:absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      color: azure;
+      background-color: black;
+    }
+    #contactsection {
+      display:flex;
+      flex-direction: row;
+      position:absolute;
+      bottom: 0px;
+      left: 300px;
+    }
