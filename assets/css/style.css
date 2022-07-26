@@ -1,17 +1,30 @@
+:root {
+  --edges: rgb(128, 255, 0);
+}
+
 * { 
 }
 
 h1, h2 {
-    color: chartreuse;
+    color: var(--edges);
     font-family:Arial, Helvetica, sans-serif;
     font-size: 30px;
     padding-left: 15px;
     padding-top: 10px;
 }
 
+
+h3 {
+    color: var(--edges);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
 body {
-  position:relative;
   display: flex;
+  flex-direction: row;
   background-color: black;
 }
 
@@ -21,6 +34,7 @@ body {
     #logo {
       width: 300px;
       height: 300px;
+      border-right: 2px solid var(--edges);
     }
 
     nav {
@@ -31,6 +45,7 @@ body {
       height: 100px;
       background-color: azure;
     }
+
     nav ul {
       display: flex;
       flex-direction: row;
@@ -40,16 +55,19 @@ body {
       background-color: azure;
     }
     nav a {
-        opacity: .35;
+        opacity: .50;
     }
     #about:hover {
       opacity: 1;
+      border: 2px solid black ;
     }
     #work:hover {
       opacity: 1;
+      border: 2px solid black ;
     }
     #contact:hover {
       opacity: 1;
+      border: 2px solid black ;
     }
 
     #decorativebar {
@@ -59,15 +77,17 @@ body {
       top: 100px;
       left: 300px;
       background-image: url("../images/static.png");
-      border-top: 2px solid chartreuse;
+      border-top: 2px solid var(--edges);
     }
 
     #aboutsection {
+      display: flex;
       width: 300px;
-      height: 100vh;
+      height: calc(100% - 300px);
       padding: 10px;
       color: black;
       background-color: azure;
+      border-right: 2px solid var(--edges);
     }
 
 /* WORK (MAIN) SECTION */
@@ -81,10 +101,10 @@ body {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      padding: 10px;
+      padding: 20px;
       background-color: black;
-      border-top: 2px solid chartreuse;
-      border-left: 2px solid chartreuse;
+      border-top: 2px solid var(--edges);
+      border-left: 2px solid var(--edges);
     }
 
     .bigcard {
@@ -92,8 +112,10 @@ body {
       width: 100%;
       margin: 10px;
       padding: 1em;
-      background-image: url("../images/link2img.png");
-      border: 2px solid chartreuse;
+      background-image: url("../images/link1img.png");
+      background-size: cover;
+      border: 2px solid var(--edges);
+      box-shadow: inset 0 0 100px 40px black ;
     }
 
     .card {
@@ -103,9 +125,29 @@ body {
       margin: 10px;
       padding: 1em;
       flex: 1;
-      background-image: url("../images/link#img.png");
-      border: 2px solid chartreuse;
+      border: 2px solid var(--edges);
+      box-shadow: inset 0 0 75px 20px black ;
     }
+
+    #card2 {
+      background-image: url("../images/link2img.png");
+      background-size: cover;
+    }
+
+    #card3 {
+      background-image: url("../images/link3img.png");
+      background-size: cover;
+    }
+
+    #card4 {
+      background-image: url("../images/link4img.png");
+    }
+
+    #card5 {
+      background-image: url("../images/link5img.png");
+      background-size: cover;
+    }
+
 
   /* CONTACT (FOOTER) SECTION */
     footer {
@@ -117,11 +159,11 @@ body {
       bottom: 0px;
       left: 300px;
       width: calc(100vw - 300px);
-      height: 100px;
+      height: 10%;
       padding: 10px;
       background-image: url("../images/static.png");
-      border-top: 2px solid chartreuse;
-      border-bottom: 2px solid chartreuse;
+      border-top: 2px solid var(--edges);
+      border-bottom: 2px solid var(--edges);
     }
 
     .contactclass {
@@ -129,18 +171,11 @@ body {
       padding: .5em;
       color: black;
       background-color: azure;
-      border: 2px solid chartreuse;
+      border: 2px solid var(--edges);
 
     }
 
 @media screen and (max-width: 900px) {
-  body,
-  nav {
-    flex-direction: column;
-  }
-
-  #aboutsection {
-    order: 2;
-  }
 
 }
+
