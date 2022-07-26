@@ -2,8 +2,8 @@
   --edges: rgb(128, 255, 0);
 }
 
-* { 
-}
+/* * { 
+} */
 
 h1, h2 {
     color: var(--edges);
