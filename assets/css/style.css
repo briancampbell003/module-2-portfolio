@@ -2,12 +2,17 @@
   --edges: rgb(128, 255, 0);
 }
 
-/* * { 
-} */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 
 h1, h2 {
     color: var(--edges);
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     padding-left: 15px;
     padding-top: 10px;
@@ -16,16 +21,17 @@ h1, h2 {
 
 h3 {
     color: var(--edges);
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     padding-left: 15px;
     padding-top: 10px;
+    text-decoration: none;
 }
 
 body {
   display: flex;
   flex-direction: row;
-  background-color: black;
+  background-color: azure;
 }
 
 
@@ -55,7 +61,7 @@ body {
       background-color: azure;
     }
     nav a {
-        opacity: .50;
+      opacity: .50;
     }
     #about:hover {
       opacity: 1;
@@ -83,11 +89,13 @@ body {
     #aboutsection {
       display: flex;
       width: 300px;
-      height: calc(100% - 300px);
       padding: 10px;
       color: black;
       background-color: azure;
-      border-right: 2px solid var(--edges);
+    }
+    #aboutsection p {
+
+      padding-top: 1em;
     }
 
 /* WORK (MAIN) SECTION */
@@ -102,6 +110,7 @@ body {
       flex-direction: row;
       flex-wrap: wrap;
       padding: 20px;
+      padding-bottom: 100px;
       background-color: black;
       border-top: 2px solid var(--edges);
       border-left: 2px solid var(--edges);
@@ -112,6 +121,8 @@ body {
       width: 100%;
       margin: 10px;
       padding: 1em;
+      flex: 1;
+      min-width: 90%;
       background-image: url("../images/link1img.png");
       background-size: cover;
       border: 2px solid var(--edges);
@@ -155,11 +166,11 @@ body {
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      position: absolute;
+      position: fixed;
       bottom: 0px;
       left: 300px;
       width: calc(100vw - 300px);
-      height: 10%;
+      height: 80px;
       padding: 10px;
       background-image: url("../images/static.png");
       border-top: 2px solid var(--edges);
@@ -175,7 +186,50 @@ body {
 
     }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1050px) {
+ 
+  body {
+    flex-direction: column;
+  }
+  #logo {
+    display: none;
+  }
+  #decorativebar {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  li a img {
+    width: 150px;
+    height: 45px;
+  }
+  #aboutsection {
+    height: calc(100vh + 300px);
+  }
+}
 
+@media screen and (max-width: 768px) {
+
+  nav {
+    width: 100%;
+    height: 20%;
+  }
+  #aboutsection {
+    margin-top: 150px;
+    width: auto;
+    height: auto;
+  }
+  #worksection {
+    position: initial;
+    width: auto;
+    height: auto;
+  }
+  footer {
+    left: auto;
+    width: 100vw;
+  }
+  :root {
+    --edges: darkred ;
 }
 
