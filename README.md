@@ -1,1 +1,5 @@
 # module-2-portfolio
+
+This project asked me to create a portfolio website using CSS styles. In working on this module I went overboard styling my page perfectly based on the default viewport size of my browser, and used lots of absolute positioning. This created a lot of frustration when I began working on the responsiveness to display size, although ultimately I was surprised to find (eventually) that I could still create a functional webpage at various sizes without drastic code revision. Jalen and tutor David Johnson both assisted me with this responsiveness and shared my frustration with the mysterious sizing dilemmas I encountered, but both of them helped me greatly in getting to my finished product.
+
+Overall I am actually quite satisfied with this webpage, and I certainly learned some best practices for creating CSS sites from scratch (be careful with absolute positioning, amongst others).

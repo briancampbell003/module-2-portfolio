@@ -1,81 +1,66 @@
-:root {
-  --edges: rgb(128, 255, 0);
-}
+/* VARIABLES AND GENERAL STYLING */
 
-a {
-  text-decoration: none;
-}
+  :root {
+    --edges: rgb(128, 255, 0);
+    --bg: azure;
+  }
 
-a:hover {
-  text-decoration: underline;
-}
+  body {
+    background-color: var(--bg);
+  }
 
-h1, h2 {
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  h1, h2, h3 {
     color: var(--edges);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     padding-left: 15px;
     padding-top: 10px;
-}
-
-
-h3 {
-    color: var(--edges);
-    font-family: Arial, Helvetica, sans-serif;
+  }
+  h3 {
     font-size: 20px;
-    padding-left: 15px;
-    padding-top: 10px;
-    text-decoration: none;
-}
-
-body {
-  display: flex;
-  flex-direction: row;
-  background-color: azure;
-}
+  }
 
 
-/* TOP-LEFT LOGO, TOP NAV BAR, AND LEFT ABOUT BAR */
-
+/* TOP-LEFT LOGO, TOP NAV BAR, AND ABOUT SIDE BAR STYLING */
+ 
     #logo {
       width: 300px;
       height: 300px;
-      border-right: 2px solid var(--edges);
     }
 
+  /* TOP NAV BAR */
     nav {
       position: absolute;
       top: 0px;
       right: 0px;
       width: calc(100% - 300px);
       height: 100px;
-      background-color: azure;
+      background-color: var(--bg);
     }
-
     nav ul {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       align-items: center;
       justify-content: space-evenly;
-      background-color: azure;
+      background-color: var(--bg);
     }
     nav a {
-      opacity: .50;
+      opacity: .70;
     }
-    #about:hover {
+    #about:hover ,#work:hover ,#contact:hover {
       opacity: 1;
       border: 2px solid black ;
     }
-    #work:hover {
-      opacity: 1;
-      border: 2px solid black ;
-    }
-    #contact:hover {
-      opacity: 1;
-      border: 2px solid black ;
-    }
-
+  
+  /* DECORATIVE BAR */
     #decorativebar {
       height: 50px;
       width: calc(100vw - 300px);
@@ -86,113 +71,114 @@ body {
       border-top: 2px solid var(--edges);
     }
 
+  /* ABOUT SIDE BAR */
     #aboutsection {
-      display: flex;
       width: 300px;
       padding: 10px;
       color: black;
-      background-color: azure;
+      background-color: var(--bg);
     }
     #aboutsection p {
-
       padding-top: 1em;
     }
 
-/* WORK (MAIN) SECTION */
+/* WORK (MAIN) SECTION STYLING */
 
-    #worksection {
-      position:absolute;
-      top:150px;
-      left:300px;
-      width: calc(100% - 300px);
-      min-width: 300px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding: 20px;
-      padding-bottom: 100px;
-      background-color: black;
-      border-top: 2px solid var(--edges);
-      border-left: 2px solid var(--edges);
-    }
+  #worksection {
+    position:absolute;
+    top:150px;
+    left:300px;
+    width: calc(100% - 300px);
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    padding-bottom: 100px;
+    background-color: black;
+    border-top: 2px solid var(--edges);
+    border-left: 2px solid var(--edges);
+  }
 
-    .bigcard {
-      height: 400px;
-      width: 100%;
-      margin: 10px;
-      padding: 1em;
-      flex: 1;
-      min-width: 90%;
-      background-image: url("../images/link1img.png");
-      background-size: cover;
-      border: 2px solid var(--edges);
-      box-shadow: inset 0 0 100px 40px black ;
-    }
+  .bigcard {
+    height: 400px;
+    width: 100%;
+    margin: 10px;
+    padding: 1em;
+    flex: 1;
+    min-width: 90%;
+    background-image: url("../images/link1img.png");
+    background-size: cover;
+    border: 2px solid var(--edges);
+    box-shadow: inset 0 0 100px 40px black ;
+  }
 
-    .card {
-      height: 250px;
-      width: 100%;
-      min-width: 200px;
-      margin: 10px;
-      padding: 1em;
-      flex: 1;
-      border: 2px solid var(--edges);
-      box-shadow: inset 0 0 75px 20px black ;
-    }
+  .card {
+    height: 250px;
+    width: 100%;
+    min-width: 200px;
+    margin: 10px;
+    padding: 1em;
+    flex: 1;
+    border: 2px solid var(--edges);
+    box-shadow: inset 0 0 75px 20px black ;
+  }
 
-    #card2 {
-      background-image: url("../images/link2img.png");
-      background-size: cover;
-    }
+  .bigcard:hover, .card:hover {
+    box-shadow: inset 0 0 50px 10px black ;
+  }
 
-    #card3 {
-      background-image: url("../images/link3img.png");
-      background-size: cover;
-    }
+  #card2 {
+    background-image: url("../images/link2img.png");
+    background-size: cover;
+  }
+  #card3 {
+    background-image: url("../images/link3img.png");
+    background-size: cover;
+  }
+  #card4 {
+    background-image: url("../images/link4img.png");
+    background-size: cover;
+  }
+  #card5 {
+    background-image: url("../images/link5img.png");
+    background-size: cover;
+  }
 
-    #card4 {
-      background-image: url("../images/link4img.png");
-    }
 
-    #card5 {
-      background-image: url("../images/link5img.png");
-      background-size: cover;
-    }
+/* CONTACT (FOOTER) SECTION STYLING */
 
+  footer {
+    position: fixed;
+    bottom: 0px;
+    left: 300px;
+    width: calc(100vw - 300px);
+    height: 80px;
 
-  /* CONTACT (FOOTER) SECTION */
-    footer {
-      display:flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-evenly;
-      position: fixed;
-      bottom: 0px;
-      left: 300px;
-      width: calc(100vw - 300px);
-      height: 80px;
-      padding: 10px;
-      background-image: url("../images/static.png");
-      border-top: 2px solid var(--edges);
-      border-bottom: 2px solid var(--edges);
-    }
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 
-    .contactclass {
-      height: 2.5em;
-      padding: .5em;
-      color: black;
-      background-color: azure;
-      border: 2px solid var(--edges);
+    padding: 10px;
+    background-image: url("../images/static.png");
+    border-top: 2px solid var(--edges);
+    border-bottom: 2px solid var(--edges);
+  }
 
-    }
+  .contactclass {
+    height: 2.5em;
+    padding: .5em;
+    color: black;
+    background-color: var(--bg);
+    border: 2px solid var(--edges);
+  }
 
+/* DISPLAY RESPONSIVENESS WITH MEDIA QUERIES */
 @media screen and (max-width: 1050px) {
  
   body {
     flex-direction: column;
-  }
-  #logo {
-    display: none;
   }
   #decorativebar {
     display: none;
@@ -204,21 +190,19 @@ body {
     width: 150px;
     height: 45px;
   }
-  #aboutsection {
-    height: calc(100vh + 300px);
-  }
 }
 
 @media screen and (max-width: 768px) {
-
+ 
+  #logo {
+    display: none;
+  }
   nav {
     width: 100%;
-    height: 20%;
   }
   #aboutsection {
     margin-top: 150px;
     width: auto;
-    height: auto;
   }
   #worksection {
     position: initial;
@@ -231,5 +215,5 @@ body {
   }
   :root {
     --edges: darkred ;
+  }
 }
-
