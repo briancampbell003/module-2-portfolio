@@ -73,6 +73,9 @@
     }
 
   /* ABOUT SIDE BAR */
+    #abouthead {
+      color: black;
+    }
     #aboutsection {
       width: 300px;
       padding: 10px;
@@ -221,5 +224,8 @@
   }
   :root {
     --edges: darkred ;
+  }
+  #abouthead {
+    color: darkred;
   }
 }
